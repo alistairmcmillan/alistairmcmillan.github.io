@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>alistair mcmillan</title>
-  <meta name="description" content="Mostly a place for me to note things down so I don't forget them.">
+  <title>How to add a DatePicker to a Windows Phone 8 app</title>
+  <meta name="description" content="I’ve been playing about with Microsoft’s Windows Phone developer tools. I wanted to add a Date Picker control. Based on using Xcode I thought this would be e...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/lightbox.css">
-  <link rel="canonical" href="https://alistairmcmillan.github.io/">
+  <link rel="canonical" href="https://alistairmcmillan.github.io/windows%20phone%208/mobile%20development/2014/05/18/how-to-add-a-date-picker.html">
   <link rel="alternate" type="application/rss+xml" title="alistair mcmillan" href="https://alistairmcmillan.github.io/feed.xml" />
 </head>
 
@@ -51,44 +51,71 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-<!--  <h1 class="page-heading">Posts</h1> -->
+  <header class="post-header">
+    <h1 class="post-title">How to add a DatePicker to a Windows Phone 8 app</h1>
+    <p class="post-meta">18 May 2014</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/mac/pages/bug/2014/05/31/bloated-exports-from-pages-5.2.html">Bloated exports from Pages 5.2 and 5.5</a>
-        </h2>
-        <span class="post-meta">31 May 2014</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/windows%20phone%208/mobile%20development/2014/05/18/how-to-add-a-date-picker.html">How to add a DatePicker to a Windows Phone 8 app</a>
-        </h2>
-        <span class="post-meta">18 May 2014</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/website/bug/investigation/fix/2013/12/11/the-Static-Countdown.html">The Static Countdown</a>
-        </h2>
-        <span class="post-meta">11 December 2013</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/windows/howto/2013/04/17/how-to-deal-with-the-specified-module-could-not-be-found-errors.html">How to deal with 'The specified module could not be found' errors</a>
-        </h2>
-        <span class="post-meta">17 April 2013</span>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+    <p>I’ve been playing about with Microsoft’s Windows Phone developer tools. I wanted to add a Date Picker control. Based on using Xcode I thought this would be easy. It wasn’t.
+<!--more-->
+For comparison, here is how you add a Date Picker control to your iPhone or iPad app…</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<ul>
+  <li>Start typing “Date” into the search box at the bottom of the Object library in the bottom-right corner of the Xcode window, and the “Date Picker” object quickly appears.</li>
+  <li>Drag the object into place.</li>
+</ul>
 
+<p><a href="/images/Xcode_DatePicker.png" data-lightbox="image-1" data-title="Date Picker object in Xcode">
+<img src="/images/Xcode_DatePicker.png" style="width:200px;" /></a></p>
+
+<p>And here is how you do it in a Windows Phone 8 app.</p>
+
+<ul>
+  <li>
+    <p>Open the Package Manager Console from the Tools menu. Tools -&gt; NuGet Package Manager -&gt; Package Manager Console.</p>
+  </li>
+  <li>
+    <p>Within the Package Manager Console type “Install-Package WPtoolkit” to instruct Visual Studio to install the Windows Phone Toolkit.</p>
+  </li>
+</ul>
+
+<p><a href="/images/VS_Install-Package_WPtoolkit.png" data-lightbox="image-1" data-title="Installing the WPtoolkit in Visual Studio">
+<img src="/images/VS_Install-Package_WPtoolkit.png" style="width:200px;" /></a></p>
+
+<ul>
+  <li>Near the top of the XAML file where you want to use a DatePicker add the following line of code: <code>xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit</code></li>
+</ul>
+
+<p><a href="/images/VS_toolkit_namespace.png" data-lightbox="image-1" data-title="Adding the Microsoft.Phone.Controls namespace in Visual Studio">
+<img src="/images/VS_toolkit_namespace.png" style="width:200px;" /></a></p>
+
+<ul>
+  <li>Then where you want to include a DatePicker control add the following line of code: <code>&lt;toolkit:DatePicker /&gt;</code></li>
+</ul>
+
+<p><a href="/images/VS_DatePicker.png" data-lightbox="image-1" data-title="Adding a DatePicker control in Visual Studio">
+<img src="/images/VS_DatePicker.png" style="width:200px;" /></a></p>
+
+<p>There may be an easier way, but this took over an hour of searching Google and reading through forum posts until I found a way that actually worked.</p>
+
+  </article>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'alistairmcmillan';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
       </div>
