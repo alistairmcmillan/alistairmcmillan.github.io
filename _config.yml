@@ -1,0 +1,11 @@
+# Site settings
+title: alistair mcmillan
+email: alistair@mcmillan.cx
+description: "Mostly a place for me to note things down so I don't forget them."
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://alistairmcmillan.github.io" # the base hostname & protocol for your site
+twitter_username: alistair1975
+github_username:  alistairmcmillan
+
+# Build settings
+markdown: kramdown

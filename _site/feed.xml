@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>alistair mcmillan</title>
+    <description>Mostly a place for me to note things down so I don&#39;t forget them.</description>
+    <link>https://alistairmcmillan.github.io/</link>
+    <atom:link href="https://alistairmcmillan.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 15 Sep 2015 15:21:51 +0100</pubDate>
+    <lastBuildDate>Tue, 15 Sep 2015 15:21:51 +0100</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+  </channel>
+</rss>
