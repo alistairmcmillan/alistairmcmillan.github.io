@@ -5,9 +5,9 @@
     <description>Mostly a place for me to note things down so I don&#39;t forget them.</description>
     <link>https://alistairmcmillan.github.io/</link>
     <atom:link href="https://alistairmcmillan.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Sep 2015 18:00:45 +0100</pubDate>
-    <lastBuildDate>Tue, 15 Sep 2015 18:00:45 +0100</lastBuildDate>
-    <generator>Jekyll v2.4.0</generator>
+    <pubDate>Mon, 21 Sep 2015 20:48:06 +0100</pubDate>
+    <lastBuildDate>Mon, 21 Sep 2015 20:48:06 +0100</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Bloated exports from Pages 5.2 and 5.5</title>
@@ -246,6 +246,31 @@ precision of ten microseconds.&lt;/p&gt;
         <category>windows</category>
         
         <category>howto</category>
+        
+      </item>
+    
+      <item>
+        <title>Unable to locate a Java Runtime to invoke</title>
+        <description>&lt;p&gt;Tried to install the Android SDK today and OS X prompted me to install Java, which it did but then the Android SDK Manager failed with this error.&lt;/p&gt;
+
+&lt;p&gt;“Unable to locate a Java Runtime to invoke.”&lt;/p&gt;
+
+&lt;p&gt;Did a search on Google that turned up a bunch of results with a ton of really bad advice (including “Insert the system disk that came with your computer and start the installer from the desktop to re-install the system…”).&lt;/p&gt;
+
+&lt;p&gt;Turns out to be a simple fix.&lt;/p&gt;
+
+&lt;p&gt;Open Java Preferences from /Applications/Utilities and tick a box to tell the system which Java virtual machine you want to use.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/Java-Preferences.png&quot; alt=&quot;Java Preferences&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Aug 2012 15:46:00 +0100</pubDate>
+        <link>https://alistairmcmillan.github.io/macosx/java/2012/08/31/unable-to-locate-a-java-runtime-to-invoke.html</link>
+        <guid isPermaLink="true">https://alistairmcmillan.github.io/macosx/java/2012/08/31/unable-to-locate-a-java-runtime-to-invoke.html</guid>
+        
+        
+        <category>macosx</category>
+        
+        <category>java</category>
         
       </item>
     

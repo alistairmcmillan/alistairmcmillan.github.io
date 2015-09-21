@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>alistair mcmillan</title>
-  <meta name="description" content="Mostly a place for me to note things down so I don't forget them.">
+  <title>Unable to locate a Java Runtime to invoke</title>
+  <meta name="description" content="Tried to install the Android SDK today and OS X prompted me to install Java, which it did but then the Android SDK Manager failed with this error.">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/lightbox.css">
-  <link rel="canonical" href="https://alistairmcmillan.github.io/">
+  <link rel="canonical" href="https://alistairmcmillan.github.io/macosx/java/2012/08/31/unable-to-locate-a-java-runtime-to-invoke.html">
   <link rel="alternate" type="application/rss+xml" title="alistair mcmillan" href="https://alistairmcmillan.github.io/feed.xml" />
 </head>
 
@@ -51,51 +51,41 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <div class="post">
 
-<!--  <h1 class="page-heading">Posts</h1> -->
+  <header class="post-header">
+    <h1 class="post-title">Unable to locate a Java Runtime to invoke</h1>
+    <p class="post-meta">31 August 2012</p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/mac/pages/bug/2014/05/31/bloated-exports-from-pages-5.2.html">Bloated exports from Pages 5.2 and 5.5</a>
-        </h2>
-        <span class="post-meta">31 May 2014</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/windows%20phone%208/mobile%20development/2014/05/18/how-to-add-a-date-picker.html">How to add a DatePicker to a Windows Phone 8 app</a>
-        </h2>
-        <span class="post-meta">18 May 2014</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/website/bug/investigation/fix/2013/12/11/the-Static-Countdown.html">The Static Countdown</a>
-        </h2>
-        <span class="post-meta">11 December 2013</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/windows/howto/2013/04/17/how-to-deal-with-the-specified-module-could-not-be-found-errors.html">How to deal with 'The specified module could not be found' errors</a>
-        </h2>
-        <span class="post-meta">17 April 2013</span>
-      </li>
-    
-      <li>
-        <h2>
-          <a class="post-link" href="/macosx/java/2012/08/31/unable-to-locate-a-java-runtime-to-invoke.html">Unable to locate a Java Runtime to invoke</a>
-        </h2>
-        <span class="post-meta">31 August 2012</span>
-      </li>
-    
-  </ul>
+  <article class="post-content">
+    <p>Tried to install the Android SDK today and OS X prompted me to install Java, which it did but then the Android SDK Manager failed with this error.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>“Unable to locate a Java Runtime to invoke.”</p>
 
+<p>Did a search on Google that turned up a bunch of results with a ton of really bad advice (including “Insert the system disk that came with your computer and start the installer from the desktop to re-install the system…”).</p>
+
+<p>Turns out to be a simple fix.</p>
+
+<p>Open Java Preferences from /Applications/Utilities and tick a box to tell the system which Java virtual machine you want to use.</p>
+
+<p><img src="/images/Java-Preferences.png" alt="Java Preferences" /></p>
+
+  </article>
+
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'alistairmcmillan';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
       </div>
