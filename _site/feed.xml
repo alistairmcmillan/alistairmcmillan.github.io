@@ -5,9 +5,72 @@
     <description>Mostly a place for me to note things down so I don&#39;t forget them.</description>
     <link>https://alistairmcmillan.github.io/</link>
     <atom:link href="https://alistairmcmillan.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Sep 2015 20:48:06 +0100</pubDate>
-    <lastBuildDate>Mon, 21 Sep 2015 20:48:06 +0100</lastBuildDate>
+    <pubDate>Wed, 23 Sep 2015 23:02:43 +0100</pubDate>
+    <lastBuildDate>Wed, 23 Sep 2015 23:02:43 +0100</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>VirtualStore?</title>
+        <description>&lt;p&gt;The other day I wanted to change the list of servers within my SAP GUI.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;image&quot; href=&quot;/images/SAP Logon Pad.png&quot; data-lightbox=&quot;image-1&quot; data-title=&quot;SAP GUI aka Logon Pad&quot;&gt;
+&lt;img src=&quot;/images/SAP Logon Pad.png&quot; style=&quot;width:400px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The GUI gets the list from a plain text file called saplogon.ini. That file can be stored anywhere though. If you check PCs with SAP installed it’s not unusual to find more than one saplogon.ini file in various places. The quickest way to find the one that is being used is to check  Options within the SAP GUI (click on the icon in the top-left corner of the GUI window and choose “Options…” from the menu). If you select Local Configuration Files it should tell you the location of the saplogon.ini file that is actually in use.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;image&quot; href=&quot;/images/SAP GUI Options.png&quot; data-lightbox=&quot;image-1&quot; data-title=&quot;SAP GUI Options&quot;&gt;
+&lt;img src=&quot;/images/SAP GUI Options.png&quot; style=&quot;width:400px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So it’s using c:\Windows\SAPLOGON.INI. I closed the GUI, swapped that file and reopened the GUI. But it didn’t recognise that anything had changed. I tried a few different things but it failed to recognise anything changing. So where was it reading that information from? Even though the software claimed to be reading from c:\Windows\SAPLOGON.INI that didn’t seem to be the case.&lt;/p&gt;
+
+&lt;p&gt;A handy tool to see where applications are reading and writing to is &lt;a href=&quot;https://technet.microsoft.com/en-us/sysinternals/bb896645&quot;&gt;Process Monitor&lt;/a&gt; from Sysinternals (now part of Microsoft). By default it shows you pretty much all activity on your machine but you can filter it to look for something specific. In this case I opened the Filter dialog (CTRL-L), created a rule to look for “Path” “contains” “SAPLOGON.INI”, clicked the Add button and then OK.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;image&quot; href=&quot;/images/Process Monitor filter for SAPLOGON.INI.png&quot; data-lightbox=&quot;image-1&quot; data-title=&quot;Process Monitor filter for paths containing SAPLOGON.INI&quot;&gt;
+&lt;img src=&quot;/images/Process Monitor filter for SAPLOGON.INI.png&quot; style=&quot;width:400px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Now with the filter running, I reopened the SAP GUI and as you can see the application was actually reading a completely different saplogon.ini stored in c:\Users\alistair\AppData\Local\VirtualStore\Windows.&lt;/p&gt;
+
+&lt;p&gt;&lt;a class=&quot;image&quot; href=&quot;/images/Process Monitor filtered on SAPLOGON.INI.png&quot; data-lightbox=&quot;image-1&quot; data-title=&quot;Process Monitor filtered on SAPLOGON.INI&quot;&gt;
+&lt;img src=&quot;/images/Process Monitor filtered on SAPLOGON.INI.png&quot; style=&quot;width:400px;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;so-what-is-the-virtualstore-folder&quot;&gt;So what is the VirtualStore folder?&lt;/h2&gt;
+
+&lt;p&gt;From an article on Microsoft’s TechNet Magazine called &lt;a href=&quot;https://technet.microsoft.com/en-us/magazine/2007.06.uac.aspx&quot;&gt;Inside Windows Vista User Account Control&lt;/a&gt; (the feature was introduced with Vista but it’s there in later versions of Windows too):&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;While some software legitimately requires administrative rights, many programs needlessly store user data in system-global locations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Windows Vista enables these legacy applications to run in standard user accounts through the help of file system and registry namespace virtualization. When an application modifies a system-global location in the file system or registry and that operation fails because access is denied, Windows redirects the operation to a per-user area; when the application reads from a system-global location, Windows first checks for data in the per-user area and, if none is present, permits the read attempt from the global location.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For the purposes of this virtualization, Windows Vista treats a process as legacy if it’s 32-bit (versus 64-bit), is not running with administrative rights, and does not have a manifest file indicating that it was written for Windows Vista.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So Windows is recognising that the version of the SAP GUI that I’m running (version 730) was designed for a previous version of Windows where security wasn’t taken so seriously. Although the application thinks it is talking to the ini file in the c:\Windows folder, Windows is actually redirecting those requests to a copy of the file within my own profile where I don’t need administrator rights. Quietly behind the scenes. Leaving this legacy application unaware that anything is happening.&lt;/p&gt;
+
+&lt;p&gt;So I swapped the file in that VirtualStore folder and the SAP GUI picked up the changes. Alternatively I could have deleted the copy in my VirtualStore and Windows would have allowed the application to talk to the original I’d already changed in the c:\Windows folder.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 23 Sep 2015 21:52:38 +0100</pubDate>
+        <link>https://alistairmcmillan.github.io/windows/virtualstore/processmonitor/sap/sapgui/saplogon.ini/2015/09/23/virtualstore.html</link>
+        <guid isPermaLink="true">https://alistairmcmillan.github.io/windows/virtualstore/processmonitor/sap/sapgui/saplogon.ini/2015/09/23/virtualstore.html</guid>
+        
+        
+        <category>windows</category>
+        
+        <category>virtualstore</category>
+        
+        <category>processmonitor</category>
+        
+        <category>sap</category>
+        
+        <category>sapgui</category>
+        
+        <category>saplogon.ini</category>
+        
+      </item>
     
       <item>
         <title>Bloated exports from Pages 5.2 and 5.5</title>
