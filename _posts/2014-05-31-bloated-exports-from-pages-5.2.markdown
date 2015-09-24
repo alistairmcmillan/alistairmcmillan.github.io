@@ -2,7 +2,6 @@
 layout: post
 title:  "Bloated exports from Pages 5.2 and 5.5"
 date:   2014-05-31 21:31:38
-categories: mac pages bug
 ---
 
 Recently I noticed something strange in the current Mac version of Apple's [Pages](http://www.apple.com/mac/pages/) (version 5.2 1860). If you create a new blank document and immediately save the file in Pages own format you get a 62 KB file, but if you export it in ".docx" format you get a 493 KB file, almost 8 times bigger. And if you export it in ".doc (Word 1997-2004 compatible)" format, you get a huge 1.5 MB file that's ___24___ times bigger.

@@ -2,7 +2,6 @@
 layout: post
 title:  "VirtualStore?"
 date:   2015-09-23 20:52:38
-categories: windows virtualstore processmonitor sap sapgui saplogon.ini
 ---
 
 The other day I wanted to change the list of servers within my SAP GUI.

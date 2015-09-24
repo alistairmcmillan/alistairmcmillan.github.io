@@ -2,7 +2,6 @@
 layout: post
 title:  "How to deal with 'The specified module could not be found' errors"
 date:   2013-04-17 18:33:15
-categories: windows howto
 ---
 
 When regsvr32 fails with the error `LoadLibrary("softekatl.dll") failed - The specified module could not be found.` it doesn't necessarily mean it couldn't find the specified module. It might mean it couldn't find another DLL file that the specified module depends on.

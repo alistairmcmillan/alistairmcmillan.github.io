@@ -2,7 +2,6 @@
 layout: post
 title: "How to add a DatePicker to a Windows Phone 8 app"
 date: 2014-05-18 15:37:55 +0100
-categories: [Windows Phone 8, Mobile Development]
 ---
 
 I've been playing about with Microsoft's Windows Phone developer tools. I wanted to add a Date Picker control. Based on using Xcode I thought this would be easy. It wasn't.

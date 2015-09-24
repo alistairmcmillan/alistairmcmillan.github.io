@@ -2,7 +2,6 @@
 layout: post
 title:  "Unable to locate a Java Runtime to invoke"
 date:   2012-08-31 14:46:00
-categories: macosx java
 ---
 
 Tried to install the Android SDK today and OS X prompted me to install Java, which it did but then the Android SDK Manager failed with this error.

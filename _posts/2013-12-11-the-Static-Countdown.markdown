@@ -2,7 +2,6 @@
 layout: post
 title:  "The Static Countdown"
 date:   2013-12-11 07:53:00
-categories: website bug investigation fix
 ---
 
 At the top of the [Glasgow 2014 Commonwealth Game](http://www.glasgow2014.com) website they tell you the amount of time left until the launch of the games. As of writing it says "224 DAYS 20 HOURS, 19 MINUTES & 03 SECONDS TO GO." Strangely though it doesn't count down.

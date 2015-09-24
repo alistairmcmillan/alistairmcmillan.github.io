@@ -6,12 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Bloated exports from Pages 5.2 and 5.5</title>
-  <meta name="description" content="Recently I noticed something strange in the current Mac version of Apple’s Pages (version 5.2 1860). If you create a new blank document and immediately save ...">
+  <title>How to add a DatePicker to a Windows Phone 8 app</title>
+  <meta name="description" content="I’ve been playing about with Microsoft’s Windows Phone developer tools. I wanted to add a Date Picker control. Based on using Xcode I thought this would be e...">
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="stylesheet" href="/css/lightbox.css">
-  <link rel="canonical" href="https://alistairmcmillan.github.io/mac/pages/bug/2014/05/31/bloated-exports-from-pages-5.2.html">
+  <link rel="canonical" href="https://alistairmcmillan.github.io/2014/05/18/how-to-add-a-date-picker.html">
   <link rel="alternate" type="application/rss+xml" title="alistair mcmillan" href="https://alistairmcmillan.github.io/feed.xml" />
 </head>
 
@@ -54,34 +54,52 @@
         <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Bloated exports from Pages 5.2 and 5.5</h1>
-    <p class="post-meta">31 May 2014</p>
+    <h1 class="post-title">How to add a DatePicker to a Windows Phone 8 app</h1>
+    <p class="post-meta">18 May 2014</p>
   </header>
 
   <article class="post-content">
-    <p>Recently I noticed something strange in the current Mac version of Apple’s <a href="http://www.apple.com/mac/pages/">Pages</a> (version 5.2 1860). If you create a new blank document and immediately save the file in Pages own format you get a 62 KB file, but if you export it in “.docx” format you get a 493 KB file, almost 8 times bigger. And if you export it in “.doc (Word 1997-2004 compatible)” format, you get a huge 1.5 MB file that’s <strong><em>24</em></strong> times bigger.</p>
-
-<p>So what is it putting in these files?
+    <p>I’ve been playing about with Microsoft’s Windows Phone developer tools. I wanted to add a Date Picker control. Based on using Xcode I thought this would be easy. It wasn’t.
 <!--more-->
-Given that .docx formatted documents are basically zip files with a different extension it’s quite easy to see what is inside them. Simply append .zip to the filename and double-click on the file to have your Mac open the file with the default zip file handler Archive Utility. And you’ll find these files in the extracted folder…</p>
+For comparison, here is how you add a Date Picker control to your iPhone or iPad app…</p>
 
-<p><a class="image" href="/images/ExtractedUntitledDocx.png" data-lightbox="image-1" data-title="Folder of extracted blank Word docx document files">
-<img src="/images/ExtractedUntitledDocx.png" align="center" style="width:200px;" /></a></p>
+<ul>
+  <li>Start typing “Date” into the search box at the bottom of the Object library in the bottom-right corner of the Xcode window, and the “Date Picker” object quickly appears.</li>
+  <li>Drag the object into place.</li>
+</ul>
 
-<p>Most of those files are tiny, but that image1.png file in the media folder is 489 KB alone. <a href="/images/image1.png">A big 635x635px textured blue square.</a> However why is it there? It is mentioned within the theme files as the fill on a default shape, but there are no shapes in an empty blank document so that PNG file serves no purpose. So that explains the 493 KB file size of the exported docx file.</p>
+<p><a href="/images/Xcode_DatePicker.png" data-lightbox="image-1" data-title="Date Picker object in Xcode">
+<img src="/images/Xcode_DatePicker.png" style="width:200px;" /></a></p>
 
-<p>Unfortunately files in the Word 1997-2004 compatible format use a much less friendly binary format to store their data. There are probably instructions out there to help you parse the format and try to understand what it is doing, but a quick way to check is to load the file into a hex editor like <a href="http://ridiculousfish.com/hexfiend/">Hex Fiend</a> and search for the “âPNG” and “IEND” markers that respectively indicate the start and end of a PNG file.</p>
+<p>And here is how you do it in a Windows Phone 8 app.</p>
 
-<p><a class="image" href="/images/HexFiendUntitleddoc.png" data-lightbox="image-2" data-title="The blank Word 97-2004 document in Hex Fiend">
-<img src="/images/HexFiendUntitleddoc.png" style="width:200px;" /></a></p>
+<ul>
+  <li>
+    <p>Open the Package Manager Console from the Tools menu. Tools -&gt; NuGet Package Manager -&gt; Package Manager Console.</p>
+  </li>
+  <li>
+    <p>Within the Package Manager Console type “Install-Package WPtoolkit” to instruct Visual Studio to install the Windows Phone Toolkit.</p>
+  </li>
+</ul>
 
-<p>Sure enough the file has that same embedded PNG with its blue texture, but it also has a similar file with a green tint and another similar file with a yellow tint. All of them 489 KB in size and if you subtract the three 489 KB files from that huge 1.5 MB you are left with 69 KB of data. So that explains the extra padding on the Word 1997-2004 formatted document.</p>
+<p><a href="/images/VS_Install-Package_WPtoolkit.png" data-lightbox="image-1" data-title="Installing the WPtoolkit in Visual Studio">
+<img src="/images/VS_Install-Package_WPtoolkit.png" style="width:200px;" /></a></p>
 
-<p>Reported to Apple as <a href="rdar://17089255">rdar://17089255</a>.</p>
+<ul>
+  <li>Near the top of the XAML file where you want to use a DatePicker add the following line of code: <code>xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit</code></li>
+</ul>
 
-<p>Meanwhile, if you use Pages to edit documents and need to send someone a file in “.doc (Word 1997-2004 compatible)” format a solution to remove the unnecessary bloat is to open the affected files and then immediately save them again using the same format in <a href="http://www.microsoft.com/mac">Microsoft Word for Mac</a>, <a href="https://www.libreoffice.org">LibreOffice</a> or the old Pages ‘09 (tested in version 14.4.2, 4.2.4 and 4.3 1048 respectively). All of them strip out the unnecessary PNG files reducing the file size to something sensible.</p>
+<p><a href="/images/VS_toolkit_namespace.png" data-lightbox="image-1" data-title="Adding the Microsoft.Phone.Controls namespace in Visual Studio">
+<img src="/images/VS_toolkit_namespace.png" style="width:200px;" /></a></p>
 
-<p><strong>Update October 26, 2014</strong>: Tested in the recently released v5.5 (2109) and Pages is still doing exactly the same thing. My bug report is still sitting untouched almost five months later.</p>
+<ul>
+  <li>Then where you want to include a DatePicker control add the following line of code: <code>&lt;toolkit:DatePicker /&gt;</code></li>
+</ul>
+
+<p><a href="/images/VS_DatePicker.png" data-lightbox="image-1" data-title="Adding a DatePicker control in Visual Studio">
+<img src="/images/VS_DatePicker.png" style="width:200px;" /></a></p>
+
+<p>There may be an easier way, but this took over an hour of searching Google and reading through forum posts until I found a way that actually worked.</p>
 
   </article>
 
