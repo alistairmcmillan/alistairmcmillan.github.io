@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VirtualStore?"
+title:  "VirtualStore"
 date:   2015-09-23 20:52:38
 ---
 
