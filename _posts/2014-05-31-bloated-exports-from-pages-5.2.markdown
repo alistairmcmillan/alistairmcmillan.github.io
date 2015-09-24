@@ -13,11 +13,16 @@ Given that .docx formatted documents are basically zip files with a different ex
 <a class="image" href="{{site.baseurl}}/images/ExtractedUntitledDocx.png" data-lightbox="image-1" data-title="Folder of extracted blank Word docx document files">
 <img src="{{site.baseurl}}/images/ExtractedUntitledDocx.png" align="center" style="width:200px;" /></a>
 
-Most of those files are tiny, but that image1.png file in the media folder is 489 KB alone. [A big 635x635px textured blue square.]({{site.baseurl}}/images/image1.png) However why is it there? It is mentioned within the theme files as the fill on a default shape, but there are no shapes in an empty blank document so that PNG file serves no purpose. So that explains the 493 KB file size of the exported docx file.
+Most of those files are tiny, but that image1.png file in the media folder is 489 KB alone. And all it is is a big blue textured 635 pixel square.
+
+<a class="image" href="{{site.baseurl}}/images/image1.png" data-lightbox="image-1" data-title="A big blue textured 635 pixel square.">
+<img src="{{site.baseurl}}/images/image1.png" align="center" style="width:200px;" /></a>
+
+So why is it there? It is mentioned within the theme files as the fill on a default shape, but there are no shapes in an empty blank document so that PNG file serves no purpose. So that explains the 493 KB file size of the exported docx file.
 
 Unfortunately files in the Word 1997-2004 compatible format use a much less friendly binary format to store their data. There are probably instructions out there to help you parse the format and try to understand what it is doing, but a quick way to check is to load the file into a hex editor like [Hex Fiend](http://ridiculousfish.com/hexfiend/) and search for the "âPNG" and "IEND" markers that respectively indicate the start and end of a PNG file.
 
-<a class="image" href="{{site.baseurl}}/images/HexFiendUntitleddoc.png" data-lightbox="image-2" data-title="The blank Word 97-2004 document in Hex Fiend">
+<a class="image" href="{{site.baseurl}}/images/HexFiendUntitleddoc.png" data-lightbox="image-1" data-title="The blank Word 97-2004 document in Hex Fiend">
 <img src="{{site.baseurl}}/images/HexFiendUntitleddoc.png" style="width:200px;" /></a>
 
 Sure enough the file has that same embedded PNG with its blue texture, but it also has a similar file with a green tint and another similar file with a yellow tint. All of them 489 KB in size and if you subtract the three 489 KB files from that huge 1.5 MB you are left with 69 KB of data. So that explains the extra padding on the Word 1997-2004 formatted document.
