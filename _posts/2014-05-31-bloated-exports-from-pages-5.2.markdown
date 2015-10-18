@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Bloated exports from Pages 5.2 and 5.5"
+title:  "Bloated Word exports from Apple Pages"
 date:   2014-05-31 21:31:38
 ---
 
@@ -29,6 +29,16 @@ Sure enough the file has that same embedded PNG with its blue texture, but it al
 
 Reported to Apple as [rdar://17089255](rdar://17089255).
 
-Meanwhile, if you use Pages to edit documents and need to send someone a file in ".doc (Word 1997-2004 compatible)" format a solution to remove the unnecessary bloat is to open the affected files and then immediately save them again using the same format in [Microsoft Word for Mac](http://www.microsoft.com/mac), [LibreOffice](https://www.libreoffice.org) or the old Pages '09 (tested in version 14.4.2, 4.2.4 and 4.3 1048 respectively). All of them strip out the unnecessary PNG files reducing the file size to something sensible.
-
 **Update October 26, 2014**: Tested in the recently released v5.5 (2109) and Pages is still doing exactly the same thing. My bug report is still sitting untouched almost five months later.
+
+**Update October 18, 2015**: Tested in the recently release v5.6 (2553) and Pages is still doing exactly the same thing. So even though Apple explicitly call out "Improved Word export" as one of the features of Pages 5.6 they still haven't fixed this bug in Word export.
+
+<a class="image" href="{{site.baseurl}}/images/Pages 5.6 Improved Word export.png" data-lightbox="image-1" data-title="Screenshot of partial list of Pages 5.6 advertised features">
+<img src="{{site.baseurl}}/images/Pages 5.6 Improved Word export.png" align="center" style="width:200px;" /></a>
+
+Workaround
+----------
+
+If you use Pages to edit documents and need to send someone a file in Word format, a solution to remove the unnecessary bloat is to open the affected files and then immediately save them again using the same format in the free [LibreOffice](https://www.libreoffice.org) application. This strips out the unnecessary PNG files removing the excess bloat.
+
+The current version of [Microsoft Word for Mac](http://www.microsoft.com/mac) version 15.15 (150911) will remove the unnecessary PNG files from DOC files, but sadly leaves the extra PNG file in DOCX files.
