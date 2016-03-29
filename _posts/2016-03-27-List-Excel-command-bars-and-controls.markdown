@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "List Excel command bars and controls"
-date:   2016-03-29 23:00:00
+date:   2016-03-29 22:00:00
 ---
 
 Recently I had to update some old Visual Basic code to talk to a new third-party Excel toolbar (Visual Basic refers to toolbars as CommandBars internally). To do this I needed to know the names of the toolbars and toolbar buttons. I found a couple of pieces of code online that came close but didn't quite get me what I needed. So I threw this together. 
