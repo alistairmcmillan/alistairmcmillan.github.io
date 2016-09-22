@@ -36,6 +36,8 @@ Reported to Apple as [rdar://17089255](rdar://17089255).
 <a class="image" href="{{site.baseurl}}/images/Pages 5.6 Improved Word export.png" data-lightbox="image-1" data-title="Screenshot of partial list of Pages 5.6 advertised features">
 <img src="{{site.baseurl}}/images/Pages 5.6 Improved Word export.png" align="center" style="width:200px;" /></a>
 
+**Update September 22, 2016**: Tested in the recently release v6.0 (3507) and Pages is STILL doing exactly the same thing.
+
 Workaround
 ----------
 
