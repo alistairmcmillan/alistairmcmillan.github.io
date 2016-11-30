@@ -25,7 +25,7 @@ When you open System Preferences and select a screen saver written in Swift, the
 The bug is easy to replicate.
 
 1. Download [https://github.com/JohnCoates/Aerial/releases/tag/v1.2beta5](https://github.com/JohnCoates/Aerial/releases/tag/v1.2beta5) and [https://github.com/soffes/clock-saver/releases/tag/v0.5.0](https://github.com/soffes/clock-saver/releases/tag/v0.5.0). These specific versions of these two screensavers use different versions of the Swift libraries.
-2. Extract the saver files and place them in your `/Users/YOURNAME/Libraries/Screen saver` folder.
+2. Extract the saver files and place them in your `/Users/YOURNAME/Library/Screen saver` folder.
 3. Open System Preferences, select the Desktop & Screen Saver pane, locate the Aerial screen saver and select it. You should see the preview of the screen saver appear.
 4. Then select the Clock screen saver. You should see the "You cannot use the Clock screen saver with this version of OS X" error message instead of a preview.
 
