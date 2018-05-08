@@ -26,15 +26,7 @@ How to build it
 
 Extensions are deployed and distributed as single zipped files, but while developing one you can just point your browser to a folder that contains the individual files that make up the extension and it'll load them for testing from there.
 
-Within Firefox...
-* Choose "Add-Ons" from the menu button (the hamburger icon)
-* Click on the "Tools" menu (the gear icon) and select "Debug Add-On"
-* Click on the "Load Temporary Add-on" button, select the manifest.json file and click Open
-
-Within Chrome...
-* Select "Extensions" from the More tools submenu of the menu button (the hamburger icon)
-* Flip the "Developer mode" button in the top-right corner of the Extensions page
-* Click on the "LOAD UNPACKED" button and point it to the folder
+So create a folder and put the following files in it...
 
 Manifest
 ========
@@ -276,15 +268,25 @@ How to test it
 
 At this point we have a simple barebones but functioning browser extension. To test it we can tell Firefox and Chrome to load the extension from the folder.
 
+Within Firefox...
+* Choose "Add-Ons" from the menu button (the hamburger icon)
+* Click on the "Tools" menu (the gear icon) and select "Debug Add-On"
+* Click on the "Load Temporary Add-on" button, select the manifest.json file and click Open
+
+Within Chrome...
+* Select "Extensions" from the More tools submenu of the menu button (the hamburger icon)
+* Flip the "Developer mode" button in the top-right corner of the Extensions page
+* Click on the "LOAD UNPACKED" button and point it to the folder
+
+If everything goes well, the extension icon should appear in the browser toolbar and you should see an initial notification message that tells you how many items there are in your stack.
+
 <a class="image" href="{{site.baseurl}}/images/Browser notifications with sad image.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications with sad image.png" style="width:400px;" /></a>
 
 <a class="image" href="{{site.baseurl}}/images/Browser notifications with happy image.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications with happy image.png" style="width:400px;" /></a>
 
-If everything goes well, the extension icon should appear in the browser toolbar and you should see an initial notification message that tells you how many items there are in your stack.
-
-To get this to work in Remedy you need to change one setting. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. So you need to set the Refresh Interval to something other than zero.
+You potentially need to change one settings in Remedy though. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. So you need to set the Refresh Interval to something other than zero.
 
 <a class="image" href="{{site.baseurl}}/images/Set Refresh Interval.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Set Refresh Interval.png" /></a>
