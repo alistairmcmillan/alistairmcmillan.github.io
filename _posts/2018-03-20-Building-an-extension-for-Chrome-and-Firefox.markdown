@@ -5,28 +5,28 @@ subtitle: "Or Why does our fault logging app not have notifications?"
 date:   2018-05-04 18:39:00
 ---
 
-I've always been curious how browser extensions work. And at work we use a browser based application called Remedy that could really use notifications. So I threw together a little browser extension to add notifications to Remedy. Killing two birds with one stone.
+I've always been curious how browser extensions work, and at work we use a browser-based application called Remedy that could really use notifications. So, I threw together a little browser extension to add notifications to Remedy. Killing two birds with one stone.
 
 Now every time an item (for example an incident or work order) is added or removed from my team's stack, I get a little notification in the corner of my screen. This way I don't have to keep checking Remedy to see if anything has changed. As soon as anything changes I get a notification to tell me.
 
 <a class="image" href="{{site.baseurl}}/images/Browser notifications.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications.png" style="width:400px;" /></a>
 
-*Disclaimer: I threw this together in about a day. It works and the world hasn't ended so far. That doesn't mean this code won't do that tomorrow. You have been warned.*
+*Disclaimer: I threw this together in about a day. It works, and the world hasn't ended so far. That doesn't mean this code won't do that tomorrow. You have been warned.*
 
 How it works
 ------------
 
 The extension is quite simple. All the calls assigned to my team are listed in a &lt;TABLE&gt; within Remedy. The extension watches that table for changes, compares it to a previous state, and displays notifications for any changes it finds.
 
-The heart of the extension is a few lines of JavaScript code that are split over two files. The [WebExtensions API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) that is used by extensions to talk to their host browsers separates certain functions for security reasons. [Background scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) can interact with the browser (for example to update a toolbar icon), but cannot access the content of web pages. And [content scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts) can access the content of web pages but can't interact with the browser, except to send messages to a background script.
+The heart of the extension is a few lines of JavaScript code that are split over two files. The [WebExtensions API](https://developer.mozilla.org/en-US/Add-ons/WebExtensions) that is used by extensions to talk to their host browsers separates certain functions for security reasons. [Background scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) can interact with the browser (for example to update a toolbar icon) but cannot access the content of web pages. And [content scripts](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Content_scripts) can access the content of web pages but can't interact with the browser, except to send messages to a background script.
 
 How to build it
 ---------------
 
 Extensions are deployed and distributed as single zipped files, but while developing one you can just point your browser to a folder that contains the individual files that make up the extension and it'll load them for testing from there.
 
-So create a folder and put the following files in it...
+So, create a folder and put the following files in it...
 
 Manifest
 ========
@@ -76,7 +76,7 @@ $(document).ready(function() {
         var targetNode = document.getElementById('T301444200');
 
         // The application can take a while to load so
-        // if we don't initally find the table, we set
+        // if we don't initially find the table, we set
         // a timer to check back in 5 seconds to see if
         // it's appeared
         if(!targetNode) {
@@ -286,7 +286,7 @@ If everything goes well, the extension icon should appear in the browser toolbar
 <a class="image" href="{{site.baseurl}}/images/Browser notifications with happy image.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications with happy image.png" style="width:400px;" /></a>
 
-You potentially need to change one settings in Remedy though. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. So you need to set the Refresh Interval to something other than zero.
+You potentially need to change one settings in Remedy though. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. You need to set the Refresh Interval to something other than zero.
 
 <a class="image" href="{{site.baseurl}}/images/Set Refresh Interval.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Set Refresh Interval.png" /></a>
