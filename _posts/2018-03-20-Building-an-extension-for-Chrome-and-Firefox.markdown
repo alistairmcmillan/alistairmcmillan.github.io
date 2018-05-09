@@ -12,7 +12,7 @@ Now every time an item (for example an incident or work order) is added or remov
 <a class="image" href="{{site.baseurl}}/images/Browser notifications.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications.png" style="width:400px;" /></a>
 
-*Disclaimer: I threw this together in about a day. It works, and the world hasn't ended so far. That doesn't mean this code won't do that tomorrow. You have been warned.*
+*Disclaimer: I threw this together in about a day. It works, and the world hasn't ended so far. That doesn't mean this code won't open up a portal to another dimension tomorrow.*
 
 How it works
 ------------
@@ -286,7 +286,7 @@ If everything goes well, the extension icon should appear in the browser toolbar
 <a class="image" href="{{site.baseurl}}/images/Browser notifications with happy image.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications with happy image.png" style="width:400px;" /></a>
 
-You potentially need to change one settings in Remedy though. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. You need to set the Refresh Interval to something other than zero.
+You potentially need to change one setting in Remedy though. The extension doesn't do anything until it sees the content of Remedy change, and by default Remedy doesn't refresh its content automatically. You need to set the Refresh Interval to something other than zero.
 
 <a class="image" href="{{site.baseurl}}/images/Set Refresh Interval.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Set Refresh Interval.png" /></a>
