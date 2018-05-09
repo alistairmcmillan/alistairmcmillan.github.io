@@ -12,7 +12,7 @@ Now every time an item (for example an incident or work order) is added or remov
 <a class="image" href="{{site.baseurl}}/images/Browser notifications.png" data-lightbox="image-1" data-title="Browser notifications">
 <img src="{{site.baseurl}}/images/Browser notifications.png" style="width:400px;" /></a>
 
-*Disclaimer: I threw this together in about a day. It works, I've been using it for almost a year, and the world hasn't ended so far. That doesn't mean this code won't open up a portal to another dimension tomorrow.*
+*Disclaimer: I threw this together in about a day. It works, I've been using it for almost a year, and the world hasn't ended so far. However that doesn't mean this code won't open up a portal to another dimension tomorrow.*
 
 How it works
 ------------
