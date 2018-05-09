@@ -17,6 +17,11 @@
     <meta property="og:image" content="{{page.image}}" />
     <meta name="twitter:image" content="{{page.image}}" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@alistair1975">
+    <meta name="twitter:creator" content="@alistair1975">
+    <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="{{page.image}}">
   {% endif %}
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/css/lightbox.css" | prepend: site.baseurl }}">
