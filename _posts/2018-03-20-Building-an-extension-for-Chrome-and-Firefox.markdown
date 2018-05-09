@@ -2,7 +2,7 @@
 layout: post
 title:  "Building an extension for Chrome and Firefox"
 subtitle: "Or Why does our fault logging app not have notifications?"
-image: https://alistairmcmillan.github.io/images/Browser%20notifications%20with%20happy%20image.png
+image: https://alistairmcmillan.github.io/images/Browser%20notifications%20both.png
 date:   2018-05-04 18:39:00
 ---
 
