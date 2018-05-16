@@ -1,0 +1,57 @@
+---
+layout: post
+title:  "PS Waverley (1899-1940)"
+image: https://alistairmcmillan.github.io/images/Waverley%20between%20the%20wars.jpg
+date:   2018-05-12 17:50:00
+---
+
+I've always been fascinated with the *[Waverley](http://www.waverleyexcursions.co.uk)*, the "last sea-going paddle steamer in the world" that was launched on the Clyde in 1946, sold to the Paddle Steamer Preservation Society for £1 in 1973, and continues to sail the Clyde every year. But her predecessor has an arguably more interesting history, having served in both World Wars and being sunk while taking part in the troop evacuations from the beaches of Dunkirk.
+
+The earlier paddle steamer *Waverley* was built by A. & J. Inglis at their Pointhouse yard (currently the site of the Glasgow's Riverside Museum) for the princely sum of £24,200 and launched 30th May 1899 to be the flagship of the North British Steam Packet Company. She was the first North British ship to be equipped with a compound diagonal engine which was more efficient than engines that were common at the time, combined with a haystack boiler which was an older but lighter design than the boilers used on her contemporary steam ships. Both of these features meant that even though she was larger than the rest of the ships in the North British fleet she was the fastest, reaching 19.73 knots during trials.
+
+<a class="image" href="{{site.baseurl}}/images/Waverley before world war one.jpg" data-lightbox="image-1" data-title="PS Waverley before World War 1">
+<img src="{{site.baseurl}}/images/Waverley before world war one.jpg" style="width:600px; border:1px solid black;background-color: black;padding: 2px" /></a>
+<div style="text-align:center;font-size:small;padding-top:0px">Source: <a href="http://www.dalmadan.com">Dalmadan collection</a></div>
+
+She entered service on 10th July 1899 carrying passengers between [Craigendorn](https://en.wikipedia.org/wiki/Craigendoran) and [Rothesay](https://en.wikipedia.org/wiki/Rothesay,_Bute) in the morning, and on Round [Bute](https://en.wikipedia.org/wiki/Isle_of_Bute) Cruises in the afternoon. Over the next decade she also carried passengers to a variety of locations on the west coast of Scotland including Kintyre, Loch Fyne and the west of Arran.
+
+World War 1 service
+===================
+
+With the outbreak of World War 1, Clyde sailings were reduced and a number of Clyde steamers including the *Waverley* were requisitioned by the Admiralty and refitted for minesweeping duties due to their shallow draft. Her promenade deck was extended forward, the bow was plated, glass windows were removed and plated over, minesweeping equipment was added to her stern and armaments were added including a 12-pounder gun on her bow. Through the war years HMS *Waverley* (pennant number 932) served mainly on the English south and Belgian coasts.
+
+<a class="image" href="{{site.baseurl}}/images/Waverley during world war one.jpg" data-lightbox="image-1" data-title="HMS Waverley during World War 1">
+<img src="{{site.baseurl}}/images/Waverley during world war one.jpg" style="width:600px; border:1px solid black;background-color: black;padding: 2px" /></a>
+<div style="text-align:center;font-size:small;padding-top:0px">Source: <a href="http://www.dalmadan.com">Dalmadan collection</a></div>
+
+Refurbishment
+=============
+
+*Waverley* was released from service in April 1919 and spent the next 14 months being converted back from war service. The changes the Admiralty had made to the bow were retained, and the bridge was brought forward in front of her funnel giving her a similar appearance to newer paddle steamers of that time. She resumed her services to Rothesay in July 1920, with trips up to [Arrochar](https://en.wikipedia.org/wiki/Arrochar,_Argyll) and [Loch Goil](https://en.wikipedia.org/wiki/Loch_Goil).
+
+<a class="image" href="{{site.baseurl}}/images/Waverley between the wars.jpg" data-lightbox="image-1" data-title="PS Waverley between the wars">
+<img src="{{site.baseurl}}/images/Waverley between the wars.jpg" style="width:600px; border:1px solid black;background-color: black;padding: 2px" /></a>
+<div style="text-align:center;font-size:small;padding-top:0px">Source: <a href="http://www.dalmadan.com">Dalmadan collection</a></div>
+
+She changed hands as the British railway companies were merged into the London and North Eastern Railway in 1923, was replaced as the fleet's flagship in 1931 by the newer [PS *Jeanie Deans*](https://en.wikipedia.org/wiki/PS_Jeanie_Deans), was remodelled in 1933 to modernise her internal and external accommodations, and finally in 1939 she was removed from service and laid up in Bowling Harbour.
+
+World War 2 service
+===================
+
+However, with the start of World War 2 *Waverley* was quickly brought back into service. Firstly, to ferry children who were being evacuated from the city of Glasgow to the coast to avoid air raids, and then requisitioned again by the Admiralty for minesweeping duties. She was refitted a second time for war use with a 12 pounder on her bow, a twin Oerlikon gun on each of her paddleboxes and minesweeping equipment on her stern. Stationed out of Harwich on the English south coast HMS *Waverley* (pennant number N51 initially and later J51) was part of the 12th Minesweeping Flotilla tasked with sweeping the shipping lanes.
+
+On 28th May 1940 *Waverley* was one of the large number of ships that were ordered to stock up and travel to Dunkirk to assist in the evacuation of the British Expeditionary Force. Early the next morning approximately 600 men boarded *Waverley* from La Panne beach, and she started heading back to England. While the rest of her flotilla continued on to England, *Waverley* stayed behind to attempt to refloat another Clyde steamer that was beached, the [HMS *Oriole*](https://en.wikipedia.org/wiki/PS_Eagle_III). The captain of the *Oriole* had deliberately beached the ship so that she could be used as a pontoon to speed up the process of getting men from the beach onto other ships. However, after a few attempts it was decided that *Waverley* didn't have the power or the right equipment to refloat *Oriole*, so she started heading back to England alone. Within minutes of starting her return journey, she was attacked by twelve German Heinkel bombers. The Captain and crew managed to avoid the bombs for some time by zigzagging and taking evasive manoeuvres, and successfully brought down two of the bombers, but eventually a bomb exploded close enough to damage her rudder. Unable to steer the ship safely through the mine-infested waters, she had to stop which made her an easier target. Another bomb opened a large hole in her hull and she sank rapidly.
+
+While many men were lost either due to the bombing or the sinking, after over two hours in the water, 158 were picked up by the [French destroyer *Cyclone*](https://en.wikipedia.org/wiki/French_destroyer_Cyclone) and 285 by the [HMS *Golden Eagle*](https://en.wikipedia.org/wiki/PS_Golden_Eagle_(1909)), with a handful picked up by smaller vessels. One interesting detail of the story is that when *Waverley* was being refitted for her World War 2 service, the representative from the Admiralty had wanted to remove all the teak passenger seats from the deck, thinking they wouldn't be any use on a minesweeper. However, John Cameron, who had captained the *Waverley* in her last few years before being removed from service, who also served as her Captain during World War 2, was insistent that they stay because they were designed as life-rafts with buoyancy tanks fitted to their underside. He later credited these life-rafts with saving lives including his own, while the crew and troops waited to be picked up after the ship sank.
+
+You can hear Captain John Cameron, talking about the Waverley and Dunkirk in the following video produced by the Paddle Steamer Preservation Society. For his service on the *Waverley* and subsequent war service on other vessels, Captain Cameron was awarded a Distinguished Service Cross, and after being released from the Admiralty he went on to serve as the first captain of the new *Waverley*.
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/dUsXljFxfKE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></center>
+
+Sources
+=======
+
+* Paterson, Alan J. S. (1982). Classic Scottish Paddle Steamers. David & Charles. ISBN 0-7153-8335-3
+* Plummer, Russel (1995). Paddle Steamers At War 1939-1945. GMS Enterprises. ISBN 1-870384-39-3
+* Bertke, Donald A. (2011). World War II Sea War: France Falls, Britain Stands Alone: Day-to-Day Naval Actions from April 1940 through September 1940. Lulu. ISBN 1937470008.
+* Gardner, W.J.R. (2000). The Evacuation from Dunkirk: 'Operation Dynamo', 26 May–June 1940. ISBN 0714681504.
