@@ -2,6 +2,7 @@
 layout: post
 title:  "PS Waverley (1899-1940)"
 image: https://alistairmcmillan.github.io/images/Waverley%20between%20the%20wars.jpg
+excerpt: "I’ve always been fascinated with the Waverley, however her predecessor has an arguably more interesting history, having served in both World Wars and being sunk while taking part in the troop evacuations from the beaches of Dunkirk."
 date:   2018-05-12 17:50:00
 ---
 
