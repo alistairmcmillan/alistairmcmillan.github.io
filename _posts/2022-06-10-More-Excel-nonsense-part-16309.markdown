@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "More Excel nonsense, part 16309"
-image: 
+image: https://alistairmcmillan.github.io/images/Excel_Pivot_Table_results_with_months.png
 excerpt: ""
 date:   2022-06-10 06:12:47
 ---
@@ -106,7 +106,7 @@ Then if you select a cell in the Pivot Table, right-click and select Refresh you
 
 And the Pivot Table should update to break down your data by month as well as Username. Like so... 
 
-<a class="image" href="{{site.baseurl}}/images/Excel Pivot Table results with months.png" data-lightbox="image-1" data-title="Example of results in Excel Pivot table">
-<img src="{{site.baseurl}}/images/Excel Pivot Table results with months.png" style="width:500px;" /></a>
+<a class="image" href="{{site.baseurl}}/images/Excel_Pivot_Table_results_with_months.png" data-lightbox="image-1" data-title="Example of results in Excel Pivot table">
+<img src="{{site.baseurl}}/images/Excel_Pivot_Table_results_with_months.png" style="width:500px;" /></a>
 
 
