@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Excel nonsense part 16309"
+title:  "More Excel nonsense, part 16309"
 image: 
 excerpt: ""
 date:   2022-06-10 06:12:47
