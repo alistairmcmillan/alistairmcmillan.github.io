@@ -20,6 +20,12 @@ So lets say you have an activity log from an application with a bunch of timesta
 
 | Username  | Timestamp            | Action |
 | --------- | -------------------- | ------ |
+| data      | 30 Sep 2366 09:00:00 | Read   |
+| rikerwt   | 30 Sep 2366 09:00:05 | Read   |
+| data      | 30 Sep 2366 09:00:10 | Write  |
+| data      | 30 Sep 2366 09:00:15 | Read   |
+| data      | 30 Sep 2366 09:00:20 | Write  |
+| rikerwt   | 30 Sep 2366 09:03:45 | Write  |
 | laforgeg  | 01 Oct 2366 17:34:01 | Read   |
 | data      | 01 Oct 2366 17:36:45 | Read   |
 | laforgeg  | 01 Oct 2366 17:37:19 | Write  |
@@ -33,6 +39,12 @@ Firstly add a column that drops the minutes and seconds from the timestamps usin
 
 | Username  | Timestamp            | Action | Timestamp SIMPLIFIED |
 | --------- | -------------------- | ------ | -------------------- |
+| data      | 30 Sep 2366 09:00:00 | Read   | 30 Sep 2366 09       |
+| rikerwt   | 30 Sep 2366 09:00:05 | Read   | 30 Sep 2366 09       |
+| data      | 30 Sep 2366 09:00:10 | Write  | 30 Sep 2366 09       |
+| data      | 30 Sep 2366 09:00:15 | Read   | 30 Sep 2366 09       |
+| data      | 30 Sep 2366 09:00:20 | Write  | 30 Sep 2366 09       |
+| rikerwt   | 30 Sep 2366 09:03:45 | Write  | 30 Sep 2366 09       |
 | laforgeg  | 01 Oct 2366 17:34:01 | Read   | 01 Oct 2366 17       |
 | data      | 01 Oct 2366 17:36:45 | Read   | 01 Oct 2366 17       |
 | laforgeg  | 01 Oct 2366 17:37:19 | Write  | 01 Oct 2366 17       |
@@ -44,11 +56,17 @@ Secondly add another column that looks for unique instances of the user and the 
 
 | Username  | Timestamp            | Action | Timestamp SIMPLIFIED | UNIQUE |
 | --------- | -------------------- | ------ | -------------------- | ------ |
-| laforgeg  | 01 Oct 2366 17:34:01 | Read   | 01 Oct 2366 17       | 1      |
-| data      | 01 Oct 2366 17:36:45 | Read   | 01 Oct 2366 17       | 1      |
+| data      | 30 Sep 2366 09:00:00 | Read   | 30 Sep 2366 09       | 0      |
+| rikerwt   | 30 Sep 2366 09:00:05 | Read   | 30 Sep 2366 09       | 0      |
+| data      | 30 Sep 2366 09:00:10 | Write  | 30 Sep 2366 09       | 0      |
+| data      | 30 Sep 2366 09:00:15 | Read   | 30 Sep 2366 09       | 0      |
+| data      | 30 Sep 2366 09:00:20 | Write  | 30 Sep 2366 09       | 1      |
+| rikerwt   | 30 Sep 2366 09:00:05 | Write  | 30 Sep 2366 09       | 1      |
+| laforgeg  | 01 Oct 2366 17:34:01 | Read   | 01 Oct 2366 17       | 0      |
+| data      | 01 Oct 2366 17:36:45 | Read   | 01 Oct 2366 17       | 0      |
 | laforgeg  | 01 Oct 2366 17:37:19 | Write  | 01 Oct 2366 17       | 0      |
-| data      | 01 Oct 2366 17:37:15 | Read   | 01 Oct 2366 17       | 0      |
-| laforgeg  | 01 Oct 2366 17:48:10 | Read   | 01 Oct 2366 17       | 0      |
+| data      | 01 Oct 2366 17:37:15 | Read   | 01 Oct 2366 17       | 1      |
+| laforgeg  | 01 Oct 2366 17:48:10 | Read   | 01 Oct 2366 17       | 1      |
 | laforgeg  | 01 Oct 2366 18:00:05 | Write  | 01 Oct 2366 18       | 1      |
 
 Lastly select the five columns and insert a Pivot Table in a new sheet. Add Username as a row, add Timestamp SIMPLIFIED as a value (which Excel should automatically add as a count of the values), and add the UNIQUE column as a filter. It should look something like this...
