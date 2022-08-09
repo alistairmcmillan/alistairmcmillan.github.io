@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "More Excel nonsense, part 16309"
+title:  "Manipulating data using Pivot Tables in Excel"
 image: https://alistairmcmillan.github.io/images/Excel_Pivot_Table_results_with_months.png
 excerpt: ""
 date:   2022-06-10 06:12:47
