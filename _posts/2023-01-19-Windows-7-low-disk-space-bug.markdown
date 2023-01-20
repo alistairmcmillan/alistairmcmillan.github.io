@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Windows 7 low free disk space bug"
+title:  "Windows 7 low disk space bug"
 image: 
 excerpt: ""
 date:   2023-01-19 23:00:00
@@ -9,7 +9,7 @@ date:   2023-01-19 23:00:00
 Problem
 -------
 
-Stumbled on this bug recently. If you have a Windows 7 device that usually has a comfortable amount of free space but you're suddenly getting popup warnings about low free disk space, then this might have the cause.
+Stumbled on this bug recently. If you have a Windows 7 device that usually has a comfortable amount of free space but you're suddenly getting popup warnings about low disk space, then this might have the cause.
 
 Check the `c:\windows\temp` folder on your device. If it is using up a ridiculous amount of disk space, and the folder is full of 100MB files with names formatted like `cbs_123_4` then you have the bug.
 
