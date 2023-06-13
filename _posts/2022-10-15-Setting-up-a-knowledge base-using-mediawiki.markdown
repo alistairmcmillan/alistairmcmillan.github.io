@@ -112,7 +112,7 @@ To create the service for Apache open a Command Prompt as administrator and run 
 
     c:\knowledgebase\bin\apache\apache-2.4.54\bin\httpd.exe -k install -n "KB Apache 2.4.54"
     
-Ideally know you should have the two services side by side when you check them in Computer Management.
+Ideally now you should have the two services side by side when you check them in Computer Management.
 
 	KB Apache 2.4.54
 	KB MariaDB 10.9.3
