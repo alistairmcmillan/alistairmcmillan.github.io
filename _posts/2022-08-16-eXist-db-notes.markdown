@@ -28,6 +28,28 @@ Backing up eXist-db database
 
 Visit the dashboard (`http://servername:8080/exist/apps/dashboard/index.html`) and open the "Backup" app. Click the "Trigger Backup" button, don't tick the "Zip" or "Incremental" boxes. A full backup can take minutes to run, but once complete the "Backup Central" dialog will update to list the backup. You will be able to find it a folder within the `data\export\` folder called something like `full20220819-1741`.
 
+More: [https://exist-db.org/exist/apps/doc/backup](https://exist-db.org/exist/apps/doc/backup)
+
+Restoring an eXist-db database backup
+=====================================
+
+Open the Java Admin Client mentioned above. Choose "Restore" from the Tools menu. Select a full backup zip file you want to restore. Or decrypt a full backup zip file and select the \_\_contents\_\_.xml file in the db folder within the decrypted files. You'll be prompted for credentials and then shown a progress dialog while the backup is restored.
+
+After the restore is completed, you need to repair the package repository. The Admin Client will prompt you to repair it, but if that attempt fails you can run the following xquery in eXide.
+
+{% highlight xquery %}
+
+xquery version "3.1";
+
+import module namespace repair="http://exist-db.org/xquery/repo/repair" 
+at "resource:org/exist/xquery/modules/expathrepo/repair.xql";
+
+repair:clean-all(),
+repair:repair()
+{% endhighlight %}
+
+More: [https://exist-db.org/exist/apps/doc/backup#restore](https://exist-db.org/exist/apps/doc/backup#restore)
+
 Exporting an application from eXist-db
 ======================================
 
