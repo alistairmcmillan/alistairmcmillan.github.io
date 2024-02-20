@@ -19,6 +19,9 @@ Run the following command which installs Jetty and its dependencies...
 
     sudo apt install jetty9
 
+Starting Jetty using systemctl
+------------------------------
+
 The following will tell the operating system that you want Jetty to start at boot...
 
     sudo systemctl enable jetty9
@@ -29,9 +32,16 @@ And this will start the Jetty service...
 
 At this point you should be able to open a web browser and visit http://localhost:8080/ to see your Jetty install running.
 
-<a class="image" href="{{site.baseurl}}/images/Jetty default install running on Ubuntu.png" data-lightbox="image-1" data-title="Jetty default install web pages loaded in Firefox">
+<a class="image" href="{{site.baseurl}}/images/Jetty default install running on Ubuntu.png" data-lightbox="image-1" data-title="Default web page served by Jetty install loaded in Firefox">
 <img src="{{site.baseurl}}/images/Jetty default install running on Ubuntu.png" style="width:500px;" /></a>
 
 To stop the service you can run the following...
 
     sudo systemctl stop jetty9
+
+Starting Jetty from the command line
+------------------------------------
+
+The following command will start Jetty using the same parameters and configuration files used by systemctl...
+
+    sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar jetty.state=/var/lib/jetty9/jetty.state jetty-started.xml
