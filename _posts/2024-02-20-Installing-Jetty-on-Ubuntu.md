@@ -29,6 +29,9 @@ And this will start the Jetty service...
 
 At this point you should be able to open a web browser and visit http://localhost:8080/ to see your Jetty install running.
 
+<a class="image" href="{{site.baseurl}}/images/Jetty default install running on Ubuntu.png" data-lightbox="image-1" data-title="Jetty default install web pages loaded in Firefox">
+<img src="{{site.baseurl}}/images/Jetty default install running on Ubuntu.png" style="width:500px;" /></a>
+
 To stop the service you can run the following...
 
     sudo systemctl stop jetty9
