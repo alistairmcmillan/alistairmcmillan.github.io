@@ -55,14 +55,14 @@ Then run the following command to add the HTTPS and SSL modules...
 
     sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar --add-to-start=ssl,https
 
-At this point you should be able to visit https://localhost:8443 and see your Jetty install using HTTPS. However it will be using a self-signed certificate so the web browser will likely give you a warning about the site being insecure.
+At this point you should be able to visit https://localhost:8443 and see your Jetty install using HTTPS. However it will be using a self-signed certificate so the web browser will likely give you a warning about the connection not being secure.
 
-If you have your own Java keystore file with valid signed certificates you can drop it in the `/etc/jetty9/` where Jetty exists to find it. And then update the following lines in `/etc/jetty9/start.d/ssl.ini` to point to the new file and to give it the password that will allow it to access the certificates in the keystore.
+If you have your own Java keystore file with valid signed certificates you can drop it in the `/etc/jetty9/` folder where Jetty expects to find it. And then update the following lines in `/etc/jetty9/start.d/ssl.ini` to point to the new keystore, and to give it the password that will allow it to access the certificates in the keystore.
 
-    ## KeyStore file path
+    ## KeyStore file path (relative to $jetty.base)
     jetty.sslContext.keyStorePath=etc/keystore.jks
 
-    ## TrustStore file path
+    ## TrustStore file path (relative to $jetty.base)
     jetty.sslContext.trustStorePath=etc/keystore.jks
 
     ## KeyStore password
@@ -74,4 +74,4 @@ If you have your own Java keystore file with valid signed certificates you can d
     ## TrustStore password
     jetty.sslContext.trustStorePassword=MYSECUREPASSWORD
 
-If you start Jetty now using the `systemctl` command or the `/usr/bin/java` command it should now successfully read from the certificates in your keystore and allow people to connect securely.
+If you start Jetty now using the `systemctl` command or the `/usr/bin/java` command it should successfully read from the certificates in your keystore and allow people to connect securely.
