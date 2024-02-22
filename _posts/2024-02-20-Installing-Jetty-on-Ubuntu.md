@@ -6,14 +6,16 @@ excerpt: ""
 date:   2024-02-20 17:00:00
 ---
 
-Installing Jetty on Ubuntu 22.04
---------------------------------
+So lets say you are trying to set up some certificates in a Java keystore on a server and you are hitting a brick wall. You might want to quickly set up a test environment to test your certificates and keystore in isolation. Here are some quick instructions on how to set up a server for testing. These are all based on installing Jetty 9.4.45-1 on Ubuntu 22.04. YMMV with other versions.
 
 Before installing Jetty it's a good idea to run the following three commands first to make sure your Ubuntu install has all its relevant patches...
 
     sudo apt update
     sudo apt upgrade
     sudo reboot
+
+Installing Jekyll
+-----------------
 
 Run the following command which installs Jetty and its dependencies...
 
