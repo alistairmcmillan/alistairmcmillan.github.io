@@ -51,7 +51,7 @@ Configuring HTTPS
 
 Make sure that Jetty isn't running first.
 
-Then run the following command to add the HTTPS and SSL modules...
+Run the following command to add the HTTPS and SSL modules...
 
     sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar --add-to-start=ssl,https
 
@@ -75,3 +75,6 @@ If you have your own Java keystore file with valid signed certificates you can d
     jetty.sslContext.trustStorePassword=MYSECUREPASSWORD
 
 If you start Jetty now using the `systemctl` command or the `/usr/bin/java` command it should successfully read from the certificates in your keystore and allow people to connect securely.
+
+<a class="image" href="{{site.baseurl}}/images/Jetty secure install running on Ubuntu.png" data-lightbox="image-1" data-title="Default web page served by Jetty install over HTTPS loaded in Firefox">
+<img src="{{site.baseurl}}/images/Jetty secure install running on Ubuntu.png" style="width:500px;" /></a>
