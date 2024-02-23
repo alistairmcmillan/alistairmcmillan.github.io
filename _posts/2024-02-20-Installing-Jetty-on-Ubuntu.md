@@ -46,7 +46,7 @@ Starting Jetty from the command line
 
 The following command will start Jetty using the same parameters and configuration files used by systemctl...
 
-    sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar jetty.state=/var/lib/jetty9/jetty.state jetty-started.xml
+> ````sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar jetty.state=/var/lib/jetty9/jetty.state jetty-started.xml````
 
 Configuring HTTPS
 -----------------
@@ -55,7 +55,7 @@ Make sure that Jetty isn't running first.
 
 Run the following command to add the HTTPS and SSL modules...
 
-    sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar --add-to-start=ssl,https
+> ````sudo /usr/bin/java -Djetty.home=/usr/share/jetty9 -Djetty.base=/usr/share/jetty9 -Djava.io.tmpdir=/tmp -jar /usr/share/jetty9/start.jar --add-to-start=ssl,https````
 
 At this point you should be able to visit https://localhost:8443 and see your Jetty install using HTTPS. However it will be using a self-signed certificate so the web browser will likely give you a warning about the connection not being secure.
 
