@@ -32,24 +32,24 @@ The above command generates a certificate signing request (CSR) file that you se
 
 Now you have a keystore with a public/private key pair for your server, but if you use this keystore browsers will warn visitors to your server that your connection is "potentially insecure" as the certificate is "self-signed". So you create a CSR that you send off to a CA, who sign it, thus telling browsers that it can be trusted.
 
-# Step 3 - Import your signed cert
+# Step 3 - Import your signed certificate
 
-When your CA sends back your signed certificate they can send it in a number of formats. Sometimes you'll get your cert and the intermediate cert that was used to sign it in the same file (sometimes called a cert chain file). Sometimes they'll be in separate files. A quirk of keytool is that it can only import cert chain files if they are in PKCS#7 format (these usually have a p7b file extension).
+When your CA sends back your signed certificate they can send it in a number of formats. Sometimes you'll get your certificate and the intermediate certificate that was used to sign it in the same file (sometimes called a certificate chain file). Sometimes they'll be in separate files. A quirk of keytool is that it can only import certificate chain files if they are in PKCS#7 format (these usually have a p7b file extension).
 
-So there are different methods to import your signed cert and any assocaited certs...
+So there are different methods to import your signed certificate and any associated certificates...
 
 ## Option 1 - Import a p7b certificate chain
 
 > ```keytool -importcert -alias starfleet -trustcacerts -file starfleet.p7b -keystore keystore.jks```
 
-This command will let you import a cert chain (which contains your cert and any certs used to sign it in one file) into your keystore. The alias must match the alias you used at the start when you generated your public/private key pair.
+This command will let you import a cert chain (which contains your certificate and any certificates used to sign it in one file) into your keystore. The alias must match the alias you used at the start when you generated your public/private key pair.
 
 If this works successfully keytool will say "Certificate reply was installed in keystore".
 
 <a class="image" href="{{site.baseurl}}/images/Certificate p7b reply import.png" data-lightbox="image-1" data-title="Example of importing a certificate reply from a certificate authority">
 <img src="{{site.baseurl}}/images/Certificate p7b reply import.png" style="width:500px;" /></a>
 
-And you're done. If you run the ```keytool -list -keystore keystore.jks``` command you should just see one entry for your certs.
+And you're done. If you run the ```keytool -list -keystore keystore.jks``` command you should just see one entry for your certificates.
 
 <a class="image" href="{{site.baseurl}}/images/Certificate p7b done.png" data-lightbox="image-1" data-title="Example of importing a certificate reply from a certificate authority">
 <img src="{{site.baseurl}}/images/Certificate p7b done.png" style="width:500px;" /></a>
@@ -64,11 +64,11 @@ And you're done. If you run the ```keytool -list -keystore keystore.jks``` comma
 
 > ```keytool -import -trustcacerts -alias starfleet -file starfleet.crt -keystore keystore.jks```
 
-If your certs are in separate files you can import them with the above commands. Again, the alias for your signed cert must match the alias you used at the start when you generated your public/private key pair.
+If your certificates are in separate files, you can import them with the above commands. Again, the alias for your signed certificate must match the alias you used at the start when you generated your public/private key pair.
 
-You may not need to import the root cert, it may already be present within your operating system. Keytool will ask you to confirm whether you want it in the ksytore if it is already present in the operating system.
+You may not need to import the root certificate; it may already be present within your operating system. Keytool will ask you to confirm whether you want it in the keystore if it is already present in the operating system.
 
-Once you run those commands you'll be done. If you run the ```keytool -list -keystore keystore.jks``` command you'll see multiple entries for your certs, unlike the single entry when you .
+Once you run those commands you'll be done. If you run the ```keytool -list -keystore keystore.jks``` command you'll see multiple entries for your certificates, unlike the single entry when you.
 
 # Other notes
 
@@ -84,7 +84,7 @@ Once you run those commands you'll be done. If you run the ```keytool -list -key
 
 > ```keytool -importkeystore -srckeystore keystore.p12 -destkeystore keystore.jks -deststoretype JKS -srcalias ABCD1234 -deststorepass YOURPASSWORD -destkeypass YOURPASSWORD```
 
-## Separating certficates into separate files
+## Separating certificates into separate files
 
 > ```keytool -printcert -file certificates.pem```
 
@@ -97,7 +97,7 @@ This should give you one line for each certificate in the file, which tells you 
 <a class="image" href="{{site.baseurl}}/images/Certificate printcert.png" data-lightbox="image-1" data-title="Example of listing the contents of a certificate chain file">
 <img src="{{site.baseurl}}/images/Certificate printcert.png" style="width:500px;" /></a>
 
-Then you can open the file in a simple text editor like Notepad, and copy and paste each certificate into it's own file. Each certificate will be marked with a "-----BEGIN CERTIFICATE-----" marker at the start and a "-----END CERTIFICATE-----" at the end. Make sure to grab the two markers and all the gibberish in between when you are copying and pasting.
+Then you can open the file in a simple text editor like Notepad, and copy and paste each certificate into its own file. Each certificate will be marked with a "-----BEGIN CERTIFICATE-----" marker at the start and a "-----END CERTIFICATE-----" at the end. Make sure to grab the two markers and all the gibberish in between when you are copying and pasting.
 
 <a class="image" href="{{site.baseurl}}/images/Certificate pem format.png" data-lightbox="image-1" data-title="Example of the contents of a certificate chain file">
 <img src="{{site.baseurl}}/images/Certificate pem format.png" style="width:500px;" /></a>
