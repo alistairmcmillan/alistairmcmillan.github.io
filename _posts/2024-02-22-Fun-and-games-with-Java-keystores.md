@@ -97,7 +97,7 @@ This should give you one line for each certificate in the file, which tells you 
 <a class="image" href="{{site.baseurl}}/images/Certificate printcert.png" data-lightbox="image-1" data-title="Example of listing the contents of a certificate chain file">
 <img src="{{site.baseurl}}/images/Certificate printcert.png" style="width:500px;" /></a>
 
-Then you can open the file in a simple text editor like Notepad, and copy and paste each certificate into its own file. Each certificate will be marked with a "-----BEGIN CERTIFICATE-----" marker at the start and a "-----END CERTIFICATE-----" at the end. Make sure to grab the two markers and all the gibberish in between when you are copying and pasting.
+Then you can open the file in a simple text editor like Notepad, and copy and paste each certificate into its own file. Each certificate will be marked with a "-----BEGIN CERTIFICATE-----" marker at the start and a "-----END CERTIFICATE-----" at the end. Make sure to grab the two markers and all the encoded data in between when you are copying and pasting.
 
 <a class="image" href="{{site.baseurl}}/images/Certificate pem format.png" data-lightbox="image-1" data-title="Example of the contents of a certificate chain file">
 <img src="{{site.baseurl}}/images/Certificate pem format.png" style="width:500px;" /></a>
