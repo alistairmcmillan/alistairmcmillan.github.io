@@ -21,7 +21,7 @@ I hadn't heard of CLOB so had to look that up.
 Guessing that the problem here is the size of the data being returned, one solution is just to truncate the amount of data. This could be done at the Universe level, but that could affect other reports built on the same Universe, so for this one report I switched the affected query to "Custom SQL" and added a substr() function around the object to pare it down to a reasonable size, and placed that inside a to_char() function to cast the shortened object as a regular char string. Like so...
 
 {% highlight sql %}
-    to_char(dbms_lob.substr(CAPTAINS_LOG_TEXT))
+    to_char(dbms_lob.substr(CAPTAINS_LOG_TEXT, 20, 1))
 {% endhighlight %}
 
 Now the report refreshes without any error.
