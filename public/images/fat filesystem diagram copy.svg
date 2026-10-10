@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="288mm"
+   height="85mm"
+   viewBox="0 0 288 85"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9e, 2021-05-24)"
+   sodipodi:docname="fat filesystem diagram.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.76095916"
+     inkscape:cx="415.92245"
+     inkscape:cy="292.39414"
+     inkscape:window-width="1419"
+     inkscape:window-height="777"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     lock-margins="true"
+     fit-margin-top="5"
+     fit-margin-left="5"
+     fit-margin-right="5"
+     fit-margin-bottom="5" />
+  <defs
+     id="defs2">
+    <rect
+       x="302.83804"
+       y="232.17583"
+       width="238.2326"
+       height="62.586529"
+       id="rect1113" />
+    <rect
+       x="302.83804"
+       y="232.17583"
+       width="238.2326"
+       height="62.586529"
+       id="rect1113-2" />
+    <rect
+       x="302.83804"
+       y="232.17583"
+       width="221.1489"
+       height="124.35069"
+       id="rect1113-2-2" />
+    <rect
+       x="302.83804"
+       y="232.17583"
+       width="221.1489"
+       height="124.35069"
+       id="rect1113-2-2-5" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-1.0000001,-1.0000001)">
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.495979;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect31"
+       width="24.504021"
+       height="74.504021"
+       x="6.2479897"
+       y="6.2479897" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.26458333,0.26458333,0,-47.692477,148.96236)"
+       id="text1111"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1113);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.005;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+         x="302.83789"
+         y="262.58676"
+         id="tspan12975">boot sector</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.495979;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect31-0"
+       width="24.504021"
+       height="74.504021"
+       x="32.24799"
+       y="6.2479897" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.26458333,0.26458333,0,-22.514992,144.82825)"
+       id="text1111-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1113-2);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.005;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+         x="302.83789"
+         y="262.58676"
+         id="tspan12977">fat region</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.495979;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect31-0-3"
+       width="24.504021"
+       height="74.504021"
+       x="58.24799"
+       y="6.2479897" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0,-0.26458333,0.26458333,0,-2.0486716,143.5471)"
+       id="text1111-8-8"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1113-2-2);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.005;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+         x="302.83789"
+         y="262.58676"
+         id="tspan12979">directory </tspan><tspan
+         x="302.83789"
+         y="304.25339"
+         id="tspan12981">region</tspan></text>
+    <rect
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:0.50026;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect31-0-3-4"
+       width="199.49974"
+       height="74.499741"
+       x="84.25013"
+       y="6.2501302" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,78.735735,-23.536524)"
+       id="text1111-8-8-3"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:33.3333px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1113-2-2-5);fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.005;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+         x="302.83789"
+         y="262.58676"
+         id="tspan12983">data region</tspan></text>
+  </g>
+</svg>
