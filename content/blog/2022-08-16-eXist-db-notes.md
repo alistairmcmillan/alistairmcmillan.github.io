@@ -36,7 +36,7 @@ Open the Java Admin Client mentioned above. Choose "Restore" from the Tools menu
 
 After the restore is completed, you need to repair the package repository. The Admin Client will prompt you to repair it, but if that attempt fails you can run the following xquery in eXide.
 
-```
+```xquery
 xquery version "3.1";
 
 import module namespace repair="http://exist-db.org/xquery/repo/repair" 

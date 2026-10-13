@@ -35,7 +35,7 @@ Start with a file called ``manifest.json``. This gives the browser basic informa
 
 The matches key is a required key that tells the browser which web pages to load the content script into. You may want to change the URL in the matches key; unless of course you do actually work for the Jupiter Mining Corporation.
 
-```
+```js
 {
     "name": "Remedy Notifications",
     "version": "0.1",
@@ -66,7 +66,7 @@ Content script
 
 The first thing the extension needs to do is locate the &lt;TABLE&gt; element within the application and grab the rows of data from the table. The extension does this in the "content script" that gets loaded into the web page. Create a file imaginatively called ``content_script.js`` and paste the following code into it.
 
-```
+```js
 $(document).ready(function() {
 
     function addObserverIfDesiredNodeAvailable() {
@@ -131,7 +131,7 @@ The background script runs in the context of the browser itself. It listens for 
 
 Create a file called ``background.js`` and paste the following code into it...
 
-```
+```js
 // Create some variables to store the state
 // of the queue between runs
 var previousCountOfRequests = -1;
